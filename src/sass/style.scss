@@ -48,3 +48,47 @@ h1 {
   border: transparent;
   border-radius: 2em;
 }
+
+.card-container {
+  margin-top: 15em;
+  background: rgba(115, 42, 19, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12.5px);
+  -webkit-backdrop-filter: blur(12.5px);
+  border-radius: 10px;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8em 2em;
+  margin-bottom: 3em;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8em 2em;
+  margin-top: 3em;
+
+  .btn-prev, .btn-next {
+    height: 50px;
+    width: 50px;
+    background: rgba(98, 116, 248, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(12.5px);
+    -webkit-backdrop-filter: blur(12.5px);
+    color: white;
+    padding: 0.5em;
+    border: transparent;
+    border-radius: 2em;
+  }
+
+  .btn-prev {
+    transform: rotate(180deg);
+  }
+}

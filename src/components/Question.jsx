@@ -1,5 +1,5 @@
 
-const Question = (props) => {
+const Question = ({ question }) => {
 
     return <h1>Question</h1>
 }
