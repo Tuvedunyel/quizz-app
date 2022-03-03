@@ -12,12 +12,12 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div className="container">
       <h1>Quizz App</h1>
-      { questions.map( question => (
+      { questions.slice(0, 1).map( (question, index) => (
         <Card key={index} question={question} />
       ) ) }
-    </>
+    </div>
   );
 }
 
