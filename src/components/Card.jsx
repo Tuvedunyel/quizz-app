@@ -11,7 +11,7 @@ const Card = (props) => {
     let goodAnswer = props.question.correct_answer;
     setCorrectAnswer(props.question.correct_answer);
     let allAnswer = [...badAnswer, goodAnswer];
-    setAnswerd(allAnswer);
+    setAnswerd(allAnswer.sort((a, b) => Math.random() - 0.5));
   }, [props.question]);
 
   const handleClick = e => {
