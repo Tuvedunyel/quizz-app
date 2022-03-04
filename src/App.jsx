@@ -6,10 +6,14 @@ function App() {
   const [questions, setQuestions] = useState([]);
   const [maxQuestion, setMaxQuestion] = useState(20);
 
-  useEffect(async () => {
-    await axios
-      .get(`https://opentdb.com/api.php?amount=${maxQuestion}`)
-      .then(res => setQuestions(res.data.results));
+  useEffect(() => {
+    const fetchData = async () => {
+      await axios
+        .get(`https://opentdb.com/api.php?amount=${maxQuestion}`)
+        .then(res => setQuestions(res.data.results));
+    };
+
+    fetchData().catch(console.error);
   }, [maxQuestion]);
 
   return (
@@ -24,7 +28,9 @@ function App() {
           onChange={e => setMaxQuestion(e.target.value)}
         />
       </form>
-      <Card questions={questions} maxQuestion={maxQuestion} />
+      {questions.length > 0 && (
+        <Card questions={questions} maxQuestion={maxQuestion} />
+      )}
     </div>
   );
 }
