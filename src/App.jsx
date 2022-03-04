@@ -6,8 +6,8 @@ function App() {
   const [questions, setQuestions] = useState([]);
   const [maxQuestion, setMaxQuestion] = useState(20);
 
-  useEffect(() => {
-    axios
+  useEffect(async () => {
+    await axios
       .get(`https://opentdb.com/api.php?amount=${maxQuestion}`)
       .then(res => setQuestions(res.data.results));
   }, [maxQuestion]);

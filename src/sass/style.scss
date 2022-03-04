@@ -92,3 +92,13 @@ footer {
     transform: rotate(180deg);
   }
 }
+
+.question {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 4rem;
+  max-width: 85%;
+  margin-inline: auto;
+  margin-bottom: 2em;
+  font-weight: 300;
+}

@@ -1,7 +1,11 @@
 
 const Question = ({ question }) => {
 
-    return <h1>Question</h1>
+    return (
+        <div className="question">
+            {question}
+        </div>
+    )
 }
 
 export default Question;

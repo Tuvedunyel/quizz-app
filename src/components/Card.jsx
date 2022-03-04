@@ -3,9 +3,14 @@ import Answer from "./Answer";
 import Question from "./Question";
 
 const Card = props => {
+  const [questions, setQuestions] = useState([]);
   const [answeredQuestions, setAnsweredQuestions] = useState(0);
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
+
+  useEffect( () => {
+    setQuestions(props.questions);
+  }, [])
 
   return (
     <div className='card-container'>
@@ -19,15 +24,15 @@ const Card = props => {
         </div>
       </header>
       <main>
-        <Question question={props.questions[currentQuestion].question} />
-        <Answer
+        {/* <Question question={questions[currentQuestion].question} /> */}
+        {/* <Answer
           incorrectAnswer={props.questions[currentQuestion].incorrect_answers}
           correctAnswers={props.questions[currentQuestion].correct_answer}
           setCorrectAnswers={setCorrectAnswers}
           setAnsweredQuestions={setAnsweredQuestions}
           setCurrentQuestion={setCurrentQuestion}
           currentQuestion={currentQuestion}
-        />
+        /> */}
       </main>
       <footer>
         <button className='btn-prev'>➜</button>
