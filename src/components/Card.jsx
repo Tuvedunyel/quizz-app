@@ -12,8 +12,10 @@ const Card = props => {
     setAnsweredQuestions(0);
     setCorrectAnswers(0);
     setCurrentQuestion(0);
-    setAnswers([...props.questions[currentQuestion].incorrect_answers,
-      props.questions[currentQuestion].correct_answer]);
+    setAnswers([
+      ...props.questions[currentQuestion].incorrect_answers,
+      props.questions[currentQuestion].correct_answer,
+    ]);
   }, [props.maxQuestion]);
 
   useEffect(() => {
@@ -52,7 +54,7 @@ const Card = props => {
   };
 
   return (
-    <div className='card-container'>
+    <div className='card-container' >
       <header>
         <div className='success'>
           ✔️ {correctAnswers + " / " + answeredQuestions}
