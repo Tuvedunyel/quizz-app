@@ -59,7 +59,7 @@ h2 {
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(8.5px);
   -webkit-backdrop-filter: blur(8.5px);
-  border-radius: 5%;
+  border-radius: 5rem;
   border: 1px solid rgba(255, 255, 255, 0.18);
   margin-top: 1em;
 }
@@ -93,6 +93,16 @@ footer {
     padding: 0.5em;
     border: transparent;
     border-radius: 2em;
+    user-select: none;
+    transition: 0.5s ease-in-out;
+
+    &:hover {
+      color: var.$cardColor;
+      background: rgba(55, 234, 187, 0.8);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(8.5px);
+      -webkit-backdrop-filter: blur(8.5px);
+    }
   }
 
   .btn-prev {
@@ -132,6 +142,7 @@ footer {
       cursor: pointer;
       transition: all 0.5s ease-in-out;
       border: 1px solid transparent;
+      user-select: none;
 
       &:hover {
         background: rgba(31, 17, 71, 0.8);
