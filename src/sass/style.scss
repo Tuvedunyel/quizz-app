@@ -1,11 +1,13 @@
 @use "./base";
-@use "./abstracts" as var; /* Set root font-size @10px equivalent */
+@use "./abstracts" as var;
+@use "./components/bubble"; /* Set root font-size @10px equivalent */
 
 body {
   background: var.$backgroundColor;
   color: white;
-  height: 100vh;
+  height: 100%;
   margin: 0;
+  position: relative;
 }
 a {
   color: white;
