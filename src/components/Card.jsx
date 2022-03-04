@@ -9,6 +9,14 @@ const Card = props => {
   const [answers, setAnswers] = useState([]);
 
   useEffect(() => {
+    setAnsweredQuestions(0);
+    setCorrectAnswers(0);
+    setCurrentQuestion(0);
+    setAnswers([...props.questions[currentQuestion].incorrect_answers,
+      props.questions[currentQuestion].correct_answer]);
+  }, [props.maxQuestion]);
+
+  useEffect(() => {
     setAnswers([
       ...props.questions[currentQuestion].incorrect_answers,
       props.questions[currentQuestion].correct_answer,

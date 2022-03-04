@@ -5,6 +5,7 @@ import Card from "./components/Card";
 function App() {
   const [questions, setQuestions] = useState([]);
   const [maxQuestion, setMaxQuestion] = useState(20);
+  const [inputValue, setInputValue] = useState(20);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,8 +26,12 @@ function App() {
           id='number'
           defaultValue='20'
           aria-label='Entre le nombre de question désiré'
-          onChange={e => setMaxQuestion(e.target.value)}
+          onChange={e => setInputValue(e.target.value)}
         />
+        <button className="maxQuestion-btn" onClick={ (e) => {
+          e.preventDefault()
+          setMaxQuestion(inputValue)
+        } }>Appliquer</button>
       </form>
       {questions.length > 0 && (
         <Card questions={questions} maxQuestion={maxQuestion} />

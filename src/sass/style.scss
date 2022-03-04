@@ -34,9 +34,36 @@ h2 {
 
 .questionNumber {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 2em;
+}
+
+.maxQuestion-btn {
+  margin-top: 1em;
+  list-style: none;
+  background: var.$titreColor;
+  padding: 0.8em 1.5em;
+  border-radius: 4rem;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var.$cardColor;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  border: 1px solid transparent;
+  user-select: none;
+
+  &:hover {
+    background: rgba(31, 17, 71, 0.8);
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: var.$titreColor;
+  }
 }
 
 #number {
