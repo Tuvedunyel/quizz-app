@@ -26,7 +26,7 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   color: #000;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Remove default margin */
@@ -156,20 +156,20 @@ ul {
 /* Set text selection color & background */
 
 ::-moz-selection {
-  color: white;
-  background-color: var.$color-text-light;
+  color: var.$backgroundColor;
+  background-color: var.$titreColor;
   @media (prefer-color-scheme: dark) {
-    color: var.$color-text-dark;
-    background-color: white;
+    color: var.$backgroundColor;
+    background-color: var.$titreColor;
   }
 }
 
 ::selection {
-  color: white;
-  background-color: var.$color-text-light;
+  color: var.$backgroundColor;
+  background-color: var.$titreColor;
   @media (prefer-color-scheme: dark) {
-    color: var.$color-text-dark;
-    background-color: white;
+    color: var.$backgroundColor;
+    background-color: var.$titreColor;
   }
 }
 
